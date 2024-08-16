@@ -21,12 +21,14 @@ use Filament\Forms\Components\TextInput;
 use Illuminate\Support\Str;
 class BrandResource extends Resource
 {
+    protected static ?int $navigationSort = 2;
     protected static ?string $model = Brand::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
+
         return $form
         ->schema([
 

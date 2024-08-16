@@ -25,6 +25,7 @@ use Illuminate\Support\Str;
 use Filament\Forms\Set;
 class ProductResource extends Resource
 {
+    protected static ?int $navigationSort = 4;
     protected static ?string $model = Product::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

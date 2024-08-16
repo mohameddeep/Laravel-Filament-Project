@@ -35,6 +35,7 @@ use Illuminate\Support\Number;
 
 class OrderResource extends Resource
 {
+    protected static ?int $navigationSort = 5;
     protected static ?string $model = Order::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

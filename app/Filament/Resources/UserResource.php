@@ -16,8 +16,9 @@ use Livewire\Component;
 
 class UserResource extends Resource
 {
+    protected static ?int $navigationSort = 1;
     protected static ?string $model = User::class;
-
+    protected static ?string $recordTitleAttribute = 'name';//global search
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -57,6 +58,11 @@ class UserResource extends Resource
                 ]),
             ]);
     }
+
+    public static function getGloballySearchableAttributes(): array
+{
+    return ['name', 'email'];
+}
 
     public static function getRelations(): array
     {

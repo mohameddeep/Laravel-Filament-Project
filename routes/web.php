@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\HomePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 //hhhhhhhhhhhhhhhhhhhhhhhh
 //ggggggggggggggg
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomePage::class);
